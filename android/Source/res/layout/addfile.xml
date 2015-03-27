@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="#FFFFFF">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:id="@+id/top" android:layout_height="44dp" android:background="@drawable/bluetopbck">
+		<Button android:id="@+id/back" style="@style/Bluebutton"
+			android:layout_width="wrap_content" android:layout_height="30dip"
+			android:layout_alignParentLeft="true" android:background="@drawable/bluebtn"
+			android:text="@string/cancel" android:visibility="visible"
+			android:layout_centerInParent="true" android:layout_marginLeft="10dp" />
+		<Button android:id="@+id/done" style="@style/Bluebutton"
+			android:layout_width="wrap_content" android:layout_height="30dip"
+			android:layout_alignParentRight="true" android:layout_marginRight="10dp"
+			android:background="@drawable/bluebtn" android:layout_centerInParent="true"
+			android:text="@string/done" />
+		<LinearLayout android:layout_width="fill_parent"
+			android:id="@+id/familyclick" android:layout_height="wrap_content"
+			android:layout_centerInParent="true" android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/done"
+			android:gravity="center" android:layout_toRightOf="@+id/back"
+			android:orientation="horizontal">
+			<RelativeLayout android:layout_width="24dp"
+				android:layout_height="23dp" android:layout_gravity="center_vertical"
+				android:gravity="center_vertical">
+				<ImageView android:id="@+id/userimgback"
+					android:layout_width="24dip" android:layout_height="23dp"
+					android:layout_centerVertical="true" android:background="@drawable/add_photo"
+					android:src="@drawable/img_bck" />
+				<ImageView android:id="@+id/userImg" android:layout_width="22dip"
+					android:layout_height="20dp" android:layout_centerInParent="true"
+					android:layout_centerVertical="true" android:background="#FFFFFF"
+					android:src="@drawable/add_photo" />
+			</RelativeLayout>
+			<TextView android:id="@+id/username_txt" style="@style/PageHeader"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_centerVertical="true" android:layout_marginLeft="5dp"
+				android:singleLine="true" android:text="familyname" />
+		</LinearLayout>
+	</RelativeLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:id="@+id/toptitle" android:layout_below="@+id/top"
+		android:layout_height="60dp" android:background="@drawable/bluetopbck"
+		android:orientation="vertical">
+		<TextView android:id="@+id/textView1" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textColor="#FFFFFF"
+			android:textSize="10sp" android:textStyle="bold" android:text="@string/title"
+			android:layout_marginLeft="5dp" android:layout_marginTop="2dp" />
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_marginTop="5dp" android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp" android:id="@+id/searchbar"
+			android:layout_height="wrap_content">
+			<EditText android:id="@+id/edtimg_title" android:background="@drawable/editbox"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:inputType="textPersonName">
+				<requestFocus />
+			</EditText>
+			<ImageView android:id="@+id/cancels" android:layout_width="17dp"
+				android:visibility="gone" android:layout_height="17dp"
+				android:layout_marginRight="5dp" android:layout_marginLeft="2dp"
+				android:src="@drawable/cancel" android:layout_alignParentRight="true"
+				android:layout_centerVertical="true">
+			</ImageView>
+		</RelativeLayout>
+	</LinearLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:orientation="vertical"
+		android:gravity="center_vertical" android:layout_below="@+id/toptitle"
+		android:layout_above="@+id/archived">
+		<ImageView android:id="@+id/imgbitmap" android:layout_width="75dp" android:layout_marginTop="5dp"
+			android:src="@drawable/defaultfileimg" android:layout_below="@+id/toptitle"
+			android:layout_height="75dp" android:layout_centerHorizontal="true" />
+		<TextView android:id="@+id/fname" android:text="fjsdjfs jsd"
+			android:layout_width="fill_parent" android:layout_gravity="center"
+			android:layout_height="wrap_content" android:textColor="#000000"
+			android:gravity="center" android:layout_below="@+id/imgbitmap"
+			android:textSize="14sp"
+			android:layout_marginTop="10dp" />
+		<Button android:id="@+id/view" style="@style/Bluebutton" android:layout_below="@+id/fname"
+			android:layout_width="wrap_content" android:layout_height="30dip" android:layout_marginBottom="5dp"
+			android:background="@drawable/bluebtn" android:layout_centerInParent="true"
+			android:text="@string/view" android:gravity="center" android:layout_marginTop="5dp" />
+	</RelativeLayout>
+	<TextView android:id="@+id/archived" android:background="@drawable/recording_bck_blue"
+		android:layout_width="fill_parent" android:layout_gravity="center"
+		android:layout_height="wrap_content" android:textColor="#FFFFFF"
+		android:gravity="center" android:layout_above="@+id/bottomb"
+		android:textSize="20sp" android:textStyle="bold" android:text="@string/nottaking" />
+	<RelativeLayout android:layout_width="fill_parent"
+		android:id="@+id/bottomb" android:layout_height="wrap_content"
+		android:background="@drawable/bottom_transparent"
+		android:layout_alignParentBottom="true">
+		<ImageView android:id="@+id/forward" android:layout_width="23dp"
+			android:layout_height="19dp" android:layout_marginLeft="10dp"
+			android:src="@drawable/forward_icon" android:layout_centerVertical="true" />
+		<ImageView android:id="@+id/delete" android:layout_width="17dp"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true"
+			android:layout_height="21dp" android:layout_marginRight="10dp"
+			android:src="@drawable/white_delete"></ImageView>
+	</RelativeLayout>
+	<LinearLayout android:id="@+id/bottom_up_detailpage"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true" android:layout_centerVertical="true"
+		android:background="@drawable/as_bck" android:gravity="center_vertical"
+		android:orientation="vertical" android:paddingBottom="20dp"
+		android:paddingLeft="20dp" android:paddingRight="20dp"
+		android:paddingTop="40dp" android:visibility="gone">
+
+		<Button android:id="@+id/email" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginBottom="5dp"
+			android:background="@drawable/blckwhiteselection" android:text="@string/email"
+			android:textColor="@color/blackbtns" android:textSize="18sp"
+			android:textStyle="bold" />
+
+		<Button android:id="@+id/message" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+			android:background="@drawable/blckwhiteselection" android:text="@string/message"
+			android:textColor="@color/blackbtns" android:textSize="18sp"
+			android:textStyle="bold" />
+
+		<Button android:id="@+id/rnottaking" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+			android:background="@drawable/blckwhiteselection" android:text="@string/removenottakinglabel"
+			android:textColor="@color/blackbtns" android:textSize="18sp"
+			android:textStyle="bold" />
+
+		<Button android:id="@+id/cancel_photo_detail"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:background="@drawable/blckwhiteselection" android:text="@string/cancel"
+			android:textColor="@color/blackbtns" android:textSize="18sp"
+			android:textStyle="bold" />
+	</LinearLayout>
+</RelativeLayout>

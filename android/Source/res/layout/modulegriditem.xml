@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:orientation="vertical">
+	<RelativeLayout android:layout_width="79dp" android:layout_height="79dp" android:layout_gravity="center_horizontal">
+		<ImageView android:layout_width="79dip"
+			android:layout_height="79dp" android:src="@drawable/mgrdbck" />
+		<ImageView android:id="@+id/img" android:layout_width="75dip" android:layout_centerInParent="true"
+			android:layout_height="75dp" android:background="#FFFFFF" />
+		<ImageView android:id="@+id/minus" android:layout_width="27dp" android:visibility="gone" 
+			android:layout_height="28dp" android:src="@drawable/minus" ></ImageView>
+		<TextView android:id="@+id/txt" android:layout_width="75dp"
+			android:lineSpacingMultiplier="1" android:layout_centerInParent="true"
+			android:lineSpacingExtra="0.8pt" android:background="@drawable/defaulttxtbck1"
+			android:textColor="#000000" android:textSize="8sp" android:paddingTop="2dp"
+			android:layout_height="75dp" android:paddingLeft="10dp" android:text="" />
+		<Button android:layout_width="fill_parent" android:visibility="gone"
+			android:layout_height="wrap_content" android:gravity="center"
+			android:layout_alignParentBottom="true" android:background="@drawable/blackbtn"
+			android:text="@string/markasnottaking" android:textSize="8sp" android:textStyle="bold"
+			android:layout_margin="5dp"
+			android:textColor="#FFFFFF" android:id="@+id/mark" />
+		<TextView android:id="@+id/archive" android:visibility="gone" android:layout_width="fill_parent" android:background="@drawable/blbcka"
+		android:layout_height="16dp" android:layout_gravity="center_horizontal" android:gravity="center_horizontal"
+		android:singleLine="true" android:layout_alignParentBottom="true" android:paddingLeft="2dp" android:paddingRight="2dp"
+		android:textSize="11sp" android:textStyle="bold" android:textColor="#FFFFFF" android:text="@string/nottaking" android:layout_marginBottom="1dp" android:layout_marginLeft="1dp" android:layout_marginRight="1dp" />
+	</RelativeLayout>
+	<TextView android:id="@+id/title" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+		android:layout_below="@+id/mem_img" android:singleLine="true"
+		android:textSize="18sp" android:textColor="#000000" android:text="jfsd fjdsfksd fjds fds" />
+</LinearLayout> 

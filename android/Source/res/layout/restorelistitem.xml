@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:id="@+id/re_module"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+		android:padding="10dp">
+	<ImageView android:id="@+id/minus" android:layout_width="27dp" 
+		android:layout_height="28dp" android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true"
+		android:src="@drawable/minus" android:layout_marginRight="10dp"/>
+	<LinearLayout android:layout_toRightOf="@+id/minus"
+		android:layout_width="fill_parent" android:id="@+id/re_module"
+		android:layout_height="wrap_content" android:orientation="vertical">
+		<TextView android:id="@+id/title" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_centerVertical="true"
+			android:text="10 Notes, 3 pics, 4 voice, 5 file memos" 
+			android:textColor="#FFFFFF" android:textSize="18sp" android:lines="2" />
+		<TextView android:id="@+id/subtitle" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:singleLine="true"
+			android:text="Backed up on: 2/5/12 1:48 PM" android:textColor="#C0C0C0"
+			android:textSize="12sp" android:paddingTop="10dp" />
+	</LinearLayout>
+</RelativeLayout>

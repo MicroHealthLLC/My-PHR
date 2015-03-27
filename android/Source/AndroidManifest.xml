@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.micro.health.family.health.record" android:versionCode="1"
+	android:versionName="1.0">
+
+	<uses-sdk android:minSdkVersion="8" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+	<uses-permission android:name="android.permission.RECORD_VIDEO"/>
+   
+	<application android:icon="@drawable/icon" android:label="@string/app_name" android:theme="@android:style/Theme.Black.NoTitleBar" android:name=".FamilyHealthApplication">
+		<activity android:name=".SplashActivity">
+			<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+		</activity>
+		<activity android:name=".ReEnterPasscodeActivity"></activity>
+		<activity android:name=".EnterPasscodeActivity"></activity>
+		<activity android:name=".MyFamilyActivity"></activity>
+		<activity android:name=".SettingsActivity"></activity>
+		<activity android:name=".AddFamilyMemberActivity"></activity>
+		<activity android:name=".ModuleListActivity"></activity>
+		<activity android:name=".ModuleDetailsActivity"></activity>
+		<activity android:name=".AddImageActivity"></activity>
+		<activity android:name=".AddTextActivity"></activity>
+		<activity android:name=".AddFileActivity"></activity>
+		<activity android:name=".AddAudioActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name=".AddVideoActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name=".AddDrawingActivity"></activity>
+		<activity android:name=".PlayVideoActivity"></activity>
+		<activity android:name=".DropboxActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name=".DropboxRestoreActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name=".FileDialog"></activity>
+		<activity android:name="com.dropbox.client2.android.AuthActivity"
+			android:launchMode="singleTask" android:configChanges="orientation|keyboard">
+			<intent-filter>
+				<!-- Change this to be db- followed by your app key -->
+				<data android:scheme="db-5e5telzra788toz" />
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		
+		
+		</application>
+</manifest>

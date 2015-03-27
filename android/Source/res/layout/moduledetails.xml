@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="#ffffff" android:orientation="vertical">
+
+	<RelativeLayout android:id="@+id/top"
+		android:layout_width="fill_parent" android:layout_height="66dp">
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="44dp" android:id="@+id/topheader"
+			android:background="@drawable/bluetopbck">
+			<Button android:id="@+id/edit_module_detail" style="@style/Bluebutton"
+				android:layout_width="wrap_content" android:layout_height="30dip"
+				android:layout_alignParentRight="true" android:layout_marginRight="10dp"
+				android:background="@drawable/bluebtn"
+				android:layout_centerInParent="true" android:text="@string/edit" />
+
+			<Button android:id="@+id/backbtn_module_detail" style="@style/Bluebutton"
+				android:layout_width="wrap_content" android:layout_height="30dip"
+				android:layout_alignParentLeft="true" android:background="@drawable/back"
+				android:text="@string/back" android:visibility="visible"
+				android:layout_centerInParent="true" android:layout_marginLeft="10dp" />
+
+			<LinearLayout android:layout_width="fill_parent" android:id="@+id/familyclick"
+				android:layout_height="wrap_content" android:layout_centerInParent="true"
+				android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+				android:layout_toLeftOf="@+id/edit_module_detail"
+				android:layout_toRightOf="@+id/backbtn_module_detail"
+				android:gravity="center" android:orientation="horizontal">
+				<RelativeLayout android:layout_width="24dp"
+					android:layout_height="23dp" android:layout_gravity="center_vertical"
+					android:gravity="center_vertical">
+					<ImageView android:id="@+id/userimgback"
+						android:layout_width="24dip" android:layout_height="23dp"
+						android:layout_centerVertical="true" android:background="@drawable/add_photo"
+						android:src="@drawable/img_bck" />
+					<ImageView android:id="@+id/userImg"
+						android:layout_width="22dip" android:layout_height="20dp"
+						android:layout_centerInParent="true"
+						android:layout_centerVertical="true" android:background="#FFFFFF"
+						android:src="@drawable/add_photo" />
+				</RelativeLayout>
+				<TextView android:id="@+id/username_txt" style="@style/PageHeader"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_centerVertical="true" android:layout_marginLeft="5dp"
+					android:singleLine="true" android:text="familyname" />
+			</LinearLayout>
+		</RelativeLayout>
+		<TextView android:id="@+id/moduleName" android:layout_width="fill_parent"
+			android:layout_height="22dp" android:background="@drawable/bluetopbck"
+			android:paddingLeft="10dip" android:text="Medical History"
+			android:layout_below="@+id/topheader" android:textColor="#ffffff"
+			android:textStyle="bold" android:textSize="15sp" android:gravity="center_vertical" />
+	</RelativeLayout>
+
+
+	<com.micro.health.family.health.record.dragdropfamily.DragLayer
+		android:id="@+id/drag_layer" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_below="@+id/top"
+		android:layout_above="@+id/bottom">
+		<GridView android:id="@+id/gridmoduleitems"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:clickable="true" android:horizontalSpacing="10dp"
+			android:listSelector="#00000000" android:numColumns="3"
+			android:paddingTop="10dp" android:scrollbars="none"
+			android:verticalSpacing="10dp">
+		</GridView>
+	</com.micro.health.family.health.record.dragdropfamily.DragLayer>
+
+	<LinearLayout android:id="@+id/bottom" android:background="@drawable/bottom"
+		android:layout_gravity="bottom" android:layout_width="fill_parent"
+		android:layout_height="44dp" android:layout_alignParentBottom="true">
+		<LinearLayout android:layout_width="fill_parent"
+			android:orientation="vertical" android:layout_height="wrap_content"
+			android:gravity="center" android:layout_gravity="center"
+			android:layout_weight="1" android:id="@+id/add_photo">
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="30dp">
+				<ImageView android:layout_width="24dp"
+					android:layout_centerInParent="true" android:layout_gravity="center"
+					android:layout_height="19dp" android:src="@drawable/camera"
+					android:id="@+id/addPhotoImg" />
+			</RelativeLayout>
+			<TextView android:layout_width="wrap_content"
+				android:textSize="10dp" android:textColor="#FFFFFF"
+				android:textStyle="bold" android:layout_height="wrap_content"
+				android:text="@string/addphoto" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:orientation="vertical" android:layout_height="wrap_content"
+			android:gravity="center" android:layout_gravity="center"
+			android:layout_weight="1" android:id="@+id/add_text">
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="30dp">
+				<ImageView android:layout_width="24dp"
+					android:layout_centerInParent="true" android:layout_gravity="center_vertical"
+					android:layout_height="25dp" android:src="@drawable/text"
+					android:id="@+id/addTextImg" />
+			</RelativeLayout>
+			<TextView android:layout_width="wrap_content"
+				android:textSize="10dp" android:textColor="#FFFFFF"
+				android:textStyle="bold" android:layout_height="wrap_content"
+				android:text="@string/addtext" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:orientation="vertical" android:layout_height="wrap_content"
+			android:gravity="center" android:layout_gravity="center"
+			android:layout_weight="1" android:id="@+id/add_audio">
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="30dp">
+				<ImageView android:layout_width="28dp"
+					android:layout_centerInParent="true" android:layout_gravity="center_vertical"
+					android:layout_height="21dp" android:src="@drawable/sound"
+					android:id="@+id/addAudioImg" />
+			</RelativeLayout>
+			<TextView android:layout_width="wrap_content"
+				android:textSize="10dp" android:textColor="#FFFFFF"
+				android:textStyle="bold" android:layout_height="wrap_content"
+				android:text="@string/addaudio" />
+		</LinearLayout>
+		
+		<LinearLayout android:layout_width="fill_parent"
+			android:orientation="vertical" android:layout_height="wrap_content"
+			android:gravity="center" android:layout_gravity="center"
+			android:layout_weight="1" android:id="@+id/add_file">
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="30dp">
+				<ImageView android:layout_width="24dp"
+					android:layout_centerInParent="true" android:layout_gravity="center_vertical"
+					android:layout_height="24dp" android:src="@drawable/paperclip"
+					android:id="@+id/addFileImg" />
+			</RelativeLayout>
+			<TextView android:layout_width="wrap_content"
+				android:textSize="10dp" android:textColor="#FFFFFF"
+				android:textStyle="bold" android:layout_height="wrap_content"
+				android:text="@string/addfile" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:orientation="vertical" android:layout_height="wrap_content"
+			android:gravity="center" android:layout_gravity="center"
+			android:layout_weight="1" android:id="@+id/add_video">
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="30dp">
+				<ImageView android:layout_width="23dp"
+					android:layout_centerInParent="true" android:layout_gravity="center_vertical"
+					android:layout_height="22dp" android:src="@drawable/video"
+					android:id="@+id/addVideoImg" />
+			</RelativeLayout>
+			<TextView android:layout_width="wrap_content"
+				android:textSize="10dp" android:textColor="#FFFFFF"
+				android:textStyle="bold" android:layout_height="wrap_content"
+				android:text="@string/addvideo" />
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:orientation="vertical" android:layout_height="wrap_content"
+			android:gravity="center" android:layout_gravity="center"
+			android:layout_weight="1" android:id="@+id/add_drawing">
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="30dp">
+				<ImageView android:layout_width="25dp"
+					android:layout_centerInParent="true" android:layout_gravity="center_vertical"
+					android:layout_height="29dp" android:src="@drawable/drawing"
+					android:id="@+id/addDrawingImg" />
+			</RelativeLayout>
+			<TextView android:layout_width="wrap_content"
+				android:textSize="10dp" android:textColor="#FFFFFF"
+				android:textStyle="bold" android:layout_height="wrap_content"
+				android:text="@string/adddrawing" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout android:id="@+id/bottom_up_detailpage"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true" android:layout_centerVertical="true"
+		android:background="@drawable/as_bck" android:gravity="center_vertical"
+		android:orientation="vertical" android:paddingBottom="20dp"
+		android:paddingLeft="20dp" android:paddingRight="20dp"
+		android:paddingTop="40dp" android:visibility="gone">
+
+		<Button android:id="@+id/take_photo_detail"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_above="@+id/choose_photo" android:layout_marginBottom="5dp"
+			android:background="@drawable/blckwhiteselection" android:text="@string/takephoto"
+			android:textColor="@color/blackbtns" android:textSize="18sp"
+			android:textStyle="bold" />
+
+		<Button android:id="@+id/choose_photo_detail"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_above="@+id/cancel_photo" android:layout_marginBottom="10dp"
+			android:background="@drawable/blckwhiteselection" android:text="@string/choosefromlib"
+			android:textColor="@color/blackbtns" android:textSize="18sp"
+			android:textStyle="bold" />
+
+		<Button android:id="@+id/cancel_photo_detail"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:background="@drawable/blckwhiteselection" android:text="@string/cancel"
+			android:textColor="@color/blackbtns" android:textSize="18sp"
+			android:textStyle="bold" />
+	</LinearLayout>
+</RelativeLayout>

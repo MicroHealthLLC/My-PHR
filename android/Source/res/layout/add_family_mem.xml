@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/background" android:orientation="vertical">
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:id="@+id/mainview">
+		<RelativeLayout android:id="@+id/top"
+			android:layout_width="fill_parent" android:layout_height="44dip"
+			android:background="@drawable/bluetopbck">
+
+			<Button android:id="@+id/cancelbtn" android:layout_width="wrap_content"
+				android:layout_height="30dp" android:layout_alignParentLeft="true"
+				style="@style/Bluebutton" android:layout_centerVertical="true"
+				android:layout_marginLeft="10dip" android:background="@drawable/bluebtn"
+				android:text="@string/cancel" />
+
+			<Button android:id="@+id/donebtn" android:layout_width="wrap_content"
+				android:layout_height="30dp" android:layout_alignBaseline="@+id/cancelbtn"
+				android:layout_alignBottom="@+id/cancelbtn" android:text="@string/done"
+				style="@style/Bluebutton" android:layout_alignParentRight="true"
+				android:layout_marginRight="10dp" android:background="@drawable/bluebtn" />
+
+			<TextView android:id="@+id/setpasstxt" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:gravity="center_horizontal"
+				android:singleLine="true" android:layout_toLeftOf="@+id/donebtn"
+				android:layout_toRightOf="@+id/cancelbtn"
+				android:layout_centerInParent="true" android:text="@string/add_mem"
+				style="@style/PageHeader" android:textSize="18sp" />
+		</RelativeLayout>
+		<RelativeLayout android:layout_below="@+id/top"
+			android:layout_marginTop="28dp" android:id="@+id/family_pro"
+			android:layout_gravity="center_horizontal" android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:gravity="center_horizontal">
+			<ImageView android:layout_width="80dip" android:background="@drawable/add_photo"
+			android:layout_height="80dp" android:src="@drawable/img_bck" android:layout_centerVertical="true" 
+				android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+				android:layout_marginLeft="20dp"/>
+			<ImageView android:id="@+id/pic_img" android:layout_width="70dip"
+				android:layout_centerVertical="true" android:layout_height="67dip"
+				android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+				android:layout_marginLeft="20dp"/>
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_toRightOf="@+id/pic_img"
+				android:layout_centerVertical="true" android:layout_height="wrap_content"
+				android:orientation="vertical" android:layout_marginLeft="20dp">
+				<EditText android:id="@+id/edt_fname" android:layout_width="180dip"
+					android:layout_height="50dip" android:layout_alignParentRight="true"
+					android:layout_alignTop="@+id/pic_img" android:layout_marginRight="5dp"
+					android:background="@drawable/pho_txt" android:hint="First Name"
+					android:paddingLeft="10dip" android:paddingTop="5dip" />
+				<EditText android:id="@+id/edt_lname" android:layout_width="180dip"
+					android:layout_height="50dip" android:layout_alignBottom="@+id/pic_img"
+					android:layout_alignLeft="@+id/edt_fname" android:background="@drawable/pho_txt_n"
+					android:hint="Last (Optional)" android:paddingLeft="10dip"
+					android:paddingTop="5dip">
+				</EditText>
+			</LinearLayout>
+		</RelativeLayout>
+		<LinearLayout android:id="@+id/bottom_up" android:orientation="vertical" android:gravity="center_vertical"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true"
+			android:layout_alignParentBottom="true" android:paddingLeft="20dp" android:paddingBottom="20dp" android:paddingTop="40dp" android:paddingRight="20dp"
+			android:background="@drawable/as_bck"
+			android:visibility="gone">
+			<Button android:id="@+id/take_photo" android:textSize="18sp" android:textStyle="bold"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_above="@+id/choose_photo" android:text="@string/takephoto"
+				android:layout_marginBottom="5dp" android:textColor="@color/blackbtns"
+				android:background="@drawable/blckwhiteselection" />
+			<Button android:id="@+id/choose_photo" android:textSize="18sp" android:textStyle="bold" 
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_above="@+id/cancel_photo" android:text="@string/choosephoto"
+				android:layout_marginBottom="10dp" android:textColor="@color/blackbtns"
+				android:background="@drawable/blckwhiteselection" />
+			<Button android:id="@+id/cancel_photo" 
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:text="@string/cancel" android:textSize="18sp" android:textStyle="bold"
+				android:textColor="@color/blackbtns"
+				android:background="@drawable/blckwhiteselection" />
+		</LinearLayout>
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:id="@+id/imageviewscale">
+		<com.micro.health.family.health.record.movescale.PhotoSortrView android:id="@+id/moveScaleImg"
+			android:layout_width="fill_parent" android:layout_height="fill_parent">
+		</com.micro.health.family.health.record.movescale.PhotoSortrView>
+		<TextView android:layout_width="fill_parent"  android:id="@+id/movescaletxt"
+			android:layout_height="wrap_content" android:background="#55000000"
+			android:text="@string/moveandscale" android:textSize="16sp"
+			android:textColor="#FFFFFF" android:paddingTop="10dp"
+			android:paddingBottom="10dp" android:gravity="center_horizontal" />
+		<LinearLayout android:layout_width="fill_parent"   android:id="@+id/buttonsbottom"
+			android:layout_height="wrap_content" android:background="#55000000"
+			android:orientation="horizontal" android:layout_alignParentBottom="true"
+			android:padding="10dp">
+			<Button android:layout_width="fill_parent" android:textColor="@color/blackbtns" android:id="@+id/choose"
+				android:layout_weight="1" android:layout_height="wrap_content" android:textSize="14sp" 
+				android:text="@string/choose" android:background="@drawable/blckwhiteselection"></Button>
+			<Button android:layout_marginLeft="10dp" android:layout_width="fill_parent" android:textColor="@color/blackbtns"
+				android:layout_weight="1" android:layout_height="wrap_content" android:textSize="14sp" android:id="@+id/cancels"
+				android:text="@string/cancel" android:background="@drawable/blckwhiteselection"></Button>
+		</LinearLayout>
+	</RelativeLayout>
+</RelativeLayout>

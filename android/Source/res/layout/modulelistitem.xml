@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:id="@+id/re_module"
+	android:layout_height="wrap_content" android:background="#ffffff"
+	android:orientation="vertical">
+	<ImageView android:id="@+id/minus" android:layout_width="27dp"
+		android:layout_height="28dp" android:layout_alignParentLeft="true"
+		android:layout_centerVertical="true" android:layout_marginLeft="10dp"
+		android:src="@drawable/minus" />
+	<TextView android:id="@+id/text_moduledata"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_centerVertical="true" android:layout_toRightOf="@+id/minus"
+		android:layout_toLeftOf="@+id/right" android:padding="10dp" 
+		android:textColor="#000000" android:textSize="18sp" />
+	<RelativeLayout android:layout_width="wrap_content" android:layout_centerVertical="true"
+		android:layout_height="wrap_content" android:id="@+id/right"
+		android:layout_alignParentRight="true" android:layout_marginRight="10dp">
+		<ImageView android:id="@+id/arrow" android:layout_width="28dp"
+			android:layout_height="29dp" android:layout_centerVertical="true"
+			android:src="@drawable/bluearrow" />
+		<ImageView android:id="@+id/plus" android:layout_width="27dp"
+			android:layout_height="28dp"
+			android:layout_centerVertical="true"
+			android:src="@drawable/plusround" />
+		<ImageView android:id="@+id/reorder" android:layout_width="19dp"
+			android:layout_height="16dp"
+			android:layout_centerVertical="true"
+			android:src="@drawable/reorder" />
+	</RelativeLayout>
+
+</RelativeLayout>

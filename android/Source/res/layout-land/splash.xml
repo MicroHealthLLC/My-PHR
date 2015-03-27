@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/gradientbck" android:orientation="vertical">
+	<ImageView android:id="@+id/logo" android:layout_width="301dp"
+		android:layout_height="109dp" android:layout_alignParentTop="true"
+		android:layout_centerHorizontal="true" android:layout_marginTop="20dp"
+		android:src="@drawable/header_logo" />
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@+id/logo"
+		android:layout_centerHorizontal="true" android:layout_marginTop="10dp"
+		android:text="@string/app_name" android:textColor="#1B3E7B"
+		android:textSize="25sp" android:id="@+id/app_namehead"
+		android:textStyle="bold">
+	</TextView>
+	<ImageView android:id="@+id/imageView1" android:src="@drawable/family" android:layout_below="@+id/app_namehead"
+		android:layout_alignParentBottom="true" android:layout_height="fill_parent"
+		android:layout_width="220dp" android:layout_marginBottom="10dp" android:layout_marginTop="10dp"
+		android:layout_centerHorizontal="true"></ImageView>
+</RelativeLayout>

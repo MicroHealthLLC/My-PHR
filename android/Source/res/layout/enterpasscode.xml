@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:background="@drawable/background" android:gravity="center_horizontal"
+	android:layout_height="match_parent">
+
+	<RelativeLayout android:id="@+id/hader"
+		android:layout_width="fill_parent" android:layout_height="44dp"
+		android:background="@drawable/bluetopbck">
+
+		<TextView android:id="@+id/setpasstttt" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textColor="#FFFFFF"
+			android:layout_centerInParent="true" android:textSize="22sp"
+			android:text="@string/setpass" android:textStyle="bold" />
+
+		<Button android:id="@+id/cancelbtn" android:layout_width="62dp"
+			android:textSize="13sp" android:textStyle="bold" android:textColor="#FFFFFF"
+			android:layout_height="30dp" android:layout_alignParentRight="true"
+			android:layout_centerVertical="true" android:layout_marginRight="5dip"
+			android:background="@drawable/bluebtn" android:text="@string/cancel" />
+
+	</RelativeLayout>
+
+	<TextView android:id="@+id/enterpasstxt" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginTop="40dp"
+		android:text="@string/enterPassCode" android:textSize="18sp"
+		android:textColor="#293040" android:textStyle="bold"
+		android:layout_gravity="center_horizontal" />
+
+	<RelativeLayout android:id="@+id/pass_lay" android:gravity="center_horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="51dp" 
+		android:background="@drawable/background" android:layout_gravity="center_horizontal">
+
+		<EditText android:id="@+id/passtxt1" android:layout_width="55dip"
+			android:layout_height="55dip" android:layout_alignParentLeft="true"
+			android:layout_below="@+id/textView1"  android:inputType="number"
+			android:background="@drawable/edttxt" android:textSize="30sp"
+			android:singleLine="true" android:gravity="center" android:digits="0123456789"
+			android:maxLength="1" android:password="true">
+			<requestFocus />
+		</EditText>
+
+		<EditText android:id="@+id/passtxt2" android:layout_width="55dip" android:inputType="number"
+			android:layout_height="55dip" android:layout_alignTop="@+id/passtxt1"
+			android:layout_marginLeft="15dp" android:background="@drawable/edttxt"
+			android:layout_toRightOf="@+id/passtxt1" android:gravity="center" android:textSize="30sp"
+			android:digits="0123456789" android:maxLength="1"  android:password="true" />
+
+		<EditText android:id="@+id/passtxt3" android:layout_width="55dip" android:inputType="number"
+			android:layout_height="55dip" android:layout_alignTop="@+id/passtxt2"
+			android:layout_marginLeft="15dp" android:background="@drawable/edttxt"
+			android:layout_toRightOf="@+id/passtxt2" android:gravity="center" android:textSize="30sp"
+			android:digits="0123456789" android:maxLength="1"  android:password="true" />
+
+		<EditText android:id="@+id/passtxt4" android:layout_width="55dip" android:inputType="number"
+			android:layout_height="55dip" android:layout_alignTop="@+id/passtxt3"
+			android:layout_marginLeft="15dp" android:background="@drawable/edttxt"
+			android:gravity="center" android:layout_toRightOf="@+id/passtxt3" android:textSize="30sp"
+			android:digits="0123456789" android:maxLength="1"  android:password="true"/>
+
+	</RelativeLayout>
+
+</LinearLayout>

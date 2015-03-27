@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:background="#ffffff" android:orientation="vertical">
+	<RelativeLayout android:id="@+id/hader"
+		android:layout_width="fill_parent" android:layout_height="44dp"
+		android:background="@drawable/bluetopbck">
+		<Button android:id="@+id/edit_modulebtn" android:layout_width="wrap_content"
+			android:layout_height="30dip" android:layout_alignParentRight="true"
+			android:background="@drawable/bluebtn" android:text="@string/edit"
+			style="@style/Bluebutton" android:layout_centerVertical="true" android:layout_marginRight="10dp"/>
+		<RelativeLayout android:layout_width="wrap_content"
+			android:layout_centerVertical="true" android:layout_height="wrap_content"
+			android:layout_marginRight="10dp" android:id="@+id/left"
+			android:layout_marginLeft="10dp">
+			<ImageButton android:id="@+id/add_module_btn"
+				android:layout_width="wrap_content" android:layout_height="30dip"
+				android:layout_alignParentLeft="true" android:layout_centerVertical="true"
+				android:background="@drawable/bluebtn"
+				android:src="@drawable/plusicon" />
+			<Button android:id="@+id/backbtn" android:layout_width="wrap_content"
+				android:layout_height="30dip" android:layout_alignParentLeft="true"
+				android:background="@drawable/back" android:text="@string/back"
+				style="@style/Bluebutton" android:visibility="visible" />
+		</RelativeLayout>
+		<LinearLayout android:layout_width="fill_parent"
+			android:gravity="center" android:layout_centerInParent="true"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:layout_toRightOf="@+id/add_module_btn" android:id="@+id/familyclick"
+			android:layout_toLeftOf="@+id/left" android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp">
+			<RelativeLayout android:layout_width="24dp"
+				android:gravity="center_vertical" android:layout_height="23dp"
+				android:layout_gravity="center_vertical">
+				<ImageView android:layout_width="24dip" android:id="@+id/userimgback"
+					android:layout_centerVertical="true" android:background="@drawable/add_photo"
+					android:layout_height="23dp" android:src="@drawable/img_bck" />
+				<ImageView android:id="@+id/userImg" android:layout_width="22dip"
+					android:layout_centerVertical="true" android:layout_centerInParent="true"
+					android:layout_height="20dp" android:src="@drawable/add_photo"
+					android:background="#FFFFFF" />
+			</RelativeLayout>
+			<TextView android:id="@+id/header" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_centerVertical="true"
+				android:text="familyname" style="@style/PageHeader"
+				android:singleLine="true" android:layout_marginLeft="5dp" />
+		</LinearLayout>
+	</RelativeLayout>
+	<TextView android:id="@+id/subheader" android:layout_width="fill_parent"
+		android:layout_height="22dp" android:paddingLeft="10dip"
+		android:gravity="center_vertical" android:textColor="#ffffff"
+		android:textSize="13sp" android:textStyle="bold" android:background="@drawable/bluetopbck"
+		android:text="@string/medicalhistory" />
+	<com.micro.health.family.health.record.DDListView
+		android:scrollbars="none" android:id="@android:id/list"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:drawSelectorOnTop="false" android:fastScrollEnabled="true"
+		android:clickable="false" android:drawingCacheQuality="high">
+	</com.micro.health.family.health.record.DDListView>
+</LinearLayout>
